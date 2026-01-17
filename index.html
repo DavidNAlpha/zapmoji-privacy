@@ -79,6 +79,15 @@
             font-size: 1.5em;
             margin-right: 10px;
         }
+        .new-badge {
+            background: #ff6b35;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -86,21 +95,39 @@
         <div class="card">
             <h1><span class="emoji">⚡</span>Politique de Confidentialité</h1>
             <div class="app-name">ZapMoji - Jeu Mobile</div>
-            <div class="date">Dernière mise à jour : 15 janvier 2026</div>
+            <div class="date">Dernière mise à jour : 16 janvier 2026</div>
 
             <div class="highlight">
-                <strong>En bref :</strong> ZapMoji est un jeu gratuit qui respecte votre vie privée. Nous ne collectons pas de données personnelles identifiables. Le jeu utilise des publicités pour rester gratuit.
+                <strong>En bref :</strong> ZapMoji est un jeu gratuit qui respecte votre vie privée. Nous utilisons une authentification anonyme pour le classement en ligne. Aucune donnée personnelle identifiable n'est requise. Le jeu utilise des publicités pour rester gratuit.
             </div>
 
             <h2>1. Informations que nous collectons</h2>
             <p>ZapMoji est conçu pour minimiser la collecte de données :</p>
             <ul>
-                <li><strong>Données de jeu locales :</strong> Vos scores, progression et préférences sont stockés uniquement sur votre appareil.</li>
-                <li><strong>Aucun compte requis :</strong> Vous n'avez pas besoin de créer un compte pour jouer.</li>
-                <li><strong>Pas de données personnelles :</strong> Nous ne collectons pas votre nom, email, ou autres informations personnelles.</li>
+                <li><strong>Données de jeu locales :</strong> Vos scores, progression, paramètres et préférences sont stockés sur votre appareil.</li>
+                <li><strong>Aucun compte requis :</strong> Vous n'avez pas besoin de créer un compte avec email pour jouer.</li>
+                <li><strong>Pas de données personnelles :</strong> Nous ne collectons pas votre nom réel, email, numéro de téléphone ou autres informations personnelles identifiables.</li>
             </ul>
 
-            <h2>2. Publicités</h2>
+            <h2>2. Classement en ligne (Leaderboard)</h2>
+            <p>ZapMoji propose un classement mondial optionnel utilisant Firebase :</p>
+            <ul>
+                <li><strong>Authentification anonyme :</strong> Un identifiant unique anonyme est généré automatiquement pour votre appareil. Aucun email ni mot de passe n'est requis.</li>
+                <li><strong>Pseudo choisi :</strong> Vous choisissez un pseudo (2-15 caractères) pour apparaître dans le classement. Ce pseudo ne doit pas contenir d'informations personnelles.</li>
+                <li><strong>Données du classement :</strong> Seuls votre pseudo, meilleur score et meilleur combo sont stockés sur nos serveurs Firebase.</li>
+                <li><strong>Participation optionnelle :</strong> Vous pouvez choisir de ne pas soumettre vos scores au classement.</li>
+            </ul>
+            <p>Les données du classement sont hébergées sur Google Firebase (Firestore). Pour plus d'informations, consultez la <a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialité de Firebase</a>.</p>
+
+            <h2>3. Économie de pièces (Coins)</h2>
+            <p>ZapMoji utilise un système de pièces virtuelles stockées localement :</p>
+            <ul>
+                <li><strong>Stockage local :</strong> Votre solde de pièces est stocké de manière sécurisée sur votre appareil uniquement.</li>
+                <li><strong>Aucune donnée transmise :</strong> Les informations de pièces ne sont jamais envoyées à nos serveurs.</li>
+                <li><strong>Fonctionnement hors-ligne :</strong> Le système de pièces fonctionne entièrement sans connexion internet.</li>
+            </ul>
+
+            <h2>4. Publicités</h2>
             <p>ZapMoji utilise Google AdMob pour afficher des publicités. AdMob peut collecter :</p>
             <ul>
                 <li>Identifiants publicitaires anonymes</li>
@@ -109,38 +136,46 @@
             </ul>
             <p>Ces données sont utilisées pour afficher des publicités pertinentes et améliorer les services publicitaires. Pour plus d'informations, consultez la <a href="https://policies.google.com/privacy" target="_blank">Politique de confidentialité de Google</a>.</p>
 
-            <h2>3. Stockage des données</h2>
-            <p>Toutes les données de jeu (scores, paramètres, progression) sont stockées localement sur votre appareil via SharedPreferences. Ces données :</p>
+            <h2>5. Stockage des données</h2>
+            <p><strong>Données locales :</strong> Vos paramètres, progression et statistiques sont stockés localement sur votre appareil via SharedPreferences. Ces données :</p>
             <ul>
-                <li>Ne sont jamais transmises à nos serveurs</li>
+                <li>Ne sont jamais transmises à nos serveurs (sauf les scores pour le classement)</li>
                 <li>Peuvent être supprimées en désinstallant l'application</li>
-                <li>Ne sont pas sauvegardées dans le cloud</li>
+            </ul>
+            <p><strong>Données en ligne :</strong> Si vous participez au classement, vos données sont stockées sur Firebase :</p>
+            <ul>
+                <li>Hébergés dans l'Union Européenne (europe-west1)</li>
+                <li>Associés uniquement à un identifiant anonyme</li>
+                <li>Conservés tant que le classement est actif</li>
+                <li>Inclut : scores et pseudo uniquement</li>
             </ul>
 
-            <h2>4. Permissions de l'application</h2>
+            <h2>6. Permissions de l'application</h2>
             <p>ZapMoji demande les permissions suivantes :</p>
             <ul>
-                <li><strong>Internet :</strong> Nécessaire pour afficher les publicités</li>
+                <li><strong>Internet :</strong> Nécessaire pour les publicités et le classement en ligne</li>
                 <li><strong>Vibration :</strong> Pour le retour haptique lors du jeu (optionnel, peut être désactivé)</li>
             </ul>
 
-            <h2>5. Protection des enfants</h2>
-            <p>ZapMoji est un jeu familial adapté à tous les âges. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans.</p>
+            <h2>7. Protection des enfants</h2>
+            <p>ZapMoji est un jeu familial adapté à tous les âges. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Le classement utilise uniquement des pseudos choisis par l'utilisateur.</p>
 
-            <h2>6. Vos droits</h2>
+            <h2>8. Vos droits</h2>
             <p>Vous pouvez à tout moment :</p>
             <ul>
                 <li>Réinitialiser votre identifiant publicitaire dans les paramètres de votre appareil</li>
                 <li>Désactiver les publicités personnalisées dans les paramètres de votre appareil</li>
-                <li>Supprimer toutes les données en désinstallant l'application</li>
+                <li>Choisir de ne pas participer au classement en ligne</li>
+                <li>Demander la suppression de vos données de classement en nous contactant</li>
+                <li>Supprimer toutes les données locales en désinstallant l'application</li>
             </ul>
 
-            <h2>7. Modifications</h2>
+            <h2>9. Modifications</h2>
             <p>Nous pouvons mettre à jour cette politique de confidentialité. Les modifications seront publiées sur cette page avec une nouvelle date de mise à jour.</p>
 
             <div class="contact">
-                <h2 style="color: white; border-left-color: #ff6b35; margin-top: 0;">8. Contact</h2>
-                <p>Pour toute question concernant cette politique de confidentialité, contactez-nous :</p>
+                <h2 style="color: white; border-left-color: #ff6b35; margin-top: 0;">10. Contact</h2>
+                <p>Pour toute question concernant cette politique de confidentialité ou pour demander la suppression de vos données, contactez-nous :</p>
                 <p>📧 Email : <a href="mailto:david.ngomboasi15@gmail.com">david.ngomboasi15@gmail.com</a></p>
                 <p>🌐 GitHub : <a href="https://github.com/DavidNAlpha" target="_blank">@DavidNAlpha</a></p>
             </div>
